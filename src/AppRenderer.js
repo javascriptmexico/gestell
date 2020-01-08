@@ -10,7 +10,7 @@ const App = React.lazy(() => import(/* webpackChunkName: "App" */'./App' ));
 ReactDOM.render(
   <Provider store={configureStore()}>
     <Suspense fallback={<div className="loading" />}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <App />
       </BrowserRouter>
     </Suspense>

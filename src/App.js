@@ -50,7 +50,7 @@ class App extends Component {
             <NotificationContainer />
             {isMultiColorActive && <ColorSwitcher />}
             <Suspense fallback={<div className="loading" />}>
-              <Router basename={'/gestell'}>
+              <Router>
                 <Switch>
                   <Route
                     path="/app"

@@ -8,8 +8,8 @@ export const subHiddenBreakpoint = 1440;
 export const menuHiddenBreakpoint = 768;
 export const defaultLocale = "en";
 export const localeOptions = [
-  { id: "en", name: "English - LTR", direction: "ltr" },
   { id: "es", name: "Español", direction: "ltr" },
+  { id: "en", name: "English - LTR", direction: "ltr" },
   { id: "enrtl", name: "English - RTL", direction: "rtl" }
 ];
 
@@ -23,7 +23,7 @@ Color Options:
 export const themeColorStorageKey="__theme_color"
 export const isMultiColorActive = true;
 export const isDarkSwitchActive = true;
-export const defaultColor = "light.purple";
+export const defaultColor = "light.green";
 export const defaultDirection = "ltr";
 export const themeRadiusStorageKey = "__theme_radius";
 export const isDemo = true;

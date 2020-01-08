@@ -1,8 +1,8 @@
 const data = [
   {
     id: "gogo",
-    icon: "iconsminds-air-balloon-1",
-    label: "menu.gogo",
+    icon: "iconsminds-data",
+    label: "gestell",
     to: "/app/gogo",
     subs: [
       {
