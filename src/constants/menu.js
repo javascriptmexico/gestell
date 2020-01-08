@@ -7,7 +7,7 @@ const data = [
     subs: [
       {
         icon: "lni-layers",
-        label: "Reporte 1 Missings",
+        label: "Missings",
         to: "/app/gogo/start"
       },
       {
@@ -94,7 +94,7 @@ const data = [
     ]
   },
   {
-    id: "blankpage",
+    id: "mapeo",
     icon: "lni-layout",
     label: "Mapeo de Metadatos",
     to: "/app/blank-page",
@@ -108,7 +108,7 @@ const data = [
   },
   {
     id: "docs",
-    icon: "iconsminds-library",
+    icon: "lni-line-spacing",
     label: "Comparativo Histórico del Perfilado",
     to: "/app/blank-page",
     subs: [

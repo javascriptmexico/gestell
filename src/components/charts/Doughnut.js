@@ -1,6 +1,5 @@
 import React from "react";
 import ChartComponent, { Chart } from "react-chartjs-2";
-
 import { centerTextPlugin } from "./util";
 import { doughnutChartOptions } from "./config";
 

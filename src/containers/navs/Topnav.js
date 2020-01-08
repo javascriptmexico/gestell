@@ -267,11 +267,10 @@ class TopNav extends Component {
           <span className="logo-mobile d-block d-xs-none" />
         </a>
         <div className="navbar-right">
-          {isDarkSwitchActive && <TopnavDarkSwitch />}
 
           <div className="header-icons d-inline-block align-middle">
 
-            <TopnavEasyAccess />
+            
             <TopnavNotifications />
             <button
               className="header-icon btn btn-empty d-none d-sm-inline-block"
