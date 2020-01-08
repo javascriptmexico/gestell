@@ -223,7 +223,7 @@ class TopNav extends Component {
             <Input
               name="searchKeyword"
               id="searchKeyword"
-              placeholder={messages["menu.search"]}
+              placeholder="Buscar"
               value={this.state.searchKeyword}
               onChange={e => this.handleSearchInputChange(e)}
               onKeyPress={e => this.handleSearchInputKeyPress(e)}
@@ -260,15 +260,7 @@ class TopNav extends Component {
               </DropdownMenu>
             </UncontrolledDropdown>
           </div>
-          <div className="position-relative d-none d-none d-lg-inline-block">
-            <a
-              className="btn btn-outline-primary btn-sm ml-2"
-              target="_top"
-              href="https://themeforest.net/cart/configure_before_adding/22544383?license=regular&ref=ColoredStrategies&size=source"
-            >
-              <IntlMessages id="user.buy" />
-            </a>
-          </div>
+          
         </div>
         <a className="navbar-logo" href="/">
           <span className="logo d-none d-xs-block" />
@@ -297,19 +289,19 @@ class TopNav extends Component {
           <div className="user d-inline-block">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
-                <span className="name mr-1">Sarah Kortney</span>
+                <span className="name mr-1">Emmanuel Ruiz</span>
                 <span>
-                  <img alt="Profile" src="/assets/img/profile-pic-l.jpg" />
+                  <img alt="Profile" src="/assets/img/profile-pic-l-8.jpg" />
                 </span>
               </DropdownToggle>
               <DropdownMenu className="mt-3" right>
-                <DropdownItem>Account</DropdownItem>
-                <DropdownItem>Features</DropdownItem>
-                <DropdownItem>History</DropdownItem>
-                <DropdownItem>Support</DropdownItem>
+                <DropdownItem>Cuenta</DropdownItem>
+                <DropdownItem>Novedades</DropdownItem>
+                <DropdownItem>Historia</DropdownItem>
+                <DropdownItem>Soporte</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem onClick={() => this.handleLogout()}>
-                  Sign out
+                  Salir
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

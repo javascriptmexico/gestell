@@ -23,7 +23,7 @@ Color Options:
 export const themeColorStorageKey="__theme_color"
 export const isMultiColorActive = true;
 export const isDarkSwitchActive = true;
-export const defaultColor = "light.green";
+export const defaultColor = "light.blue";
 export const defaultDirection = "ltr";
 export const themeRadiusStorageKey = "__theme_radius";
 export const isDemo = true;
