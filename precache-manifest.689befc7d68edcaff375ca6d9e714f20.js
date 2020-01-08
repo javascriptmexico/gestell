@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e7b8c9fc5e5ec298205a81aefdbe728",
+    "revision": "bc87b3620fce5ed0c6863176ac44545e",
     "url": "/gestell/index.html"
   },
   {
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gestell/static/css/23.205325e9.chunk.css"
   },
   {
-    "revision": "4c79df61fdf4f69255a2",
+    "revision": "a539a381ca3ff707ce24",
     "url": "/gestell/static/css/main.d4a74e54.chunk.css"
   },
   {
@@ -108,16 +108,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gestell/static/js/23.33bb8946.chunk.js"
   },
   {
-    "revision": "6c113e0791c67c947b07",
-    "url": "/gestell/static/js/App.483bfb1d.chunk.js"
+    "revision": "7c1199855d561fd1b729",
+    "url": "/gestell/static/js/App.3ec716ec.chunk.js"
   },
   {
-    "revision": "4c79df61fdf4f69255a2",
-    "url": "/gestell/static/js/main.fe9461c0.chunk.js"
+    "revision": "a539a381ca3ff707ce24",
+    "url": "/gestell/static/js/main.28b4fec3.chunk.js"
   },
   {
-    "revision": "e8b81e8d582482023ba0",
-    "url": "/gestell/static/js/runtime~main.3f07a799.js"
+    "revision": "35dc6848b9d0c1c4b313",
+    "url": "/gestell/static/js/runtime~main.b1510af3.js"
   },
   {
     "revision": "d669515d7d82dc72550a",
