@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73394f49fd3eb6602bdd030b7694886b",
+    "revision": "446bd0118e893d5ad460a3ab8bfe61f5",
     "url": "/gestell/index.html"
   },
   {
@@ -108,16 +108,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gestell/static/js/23.0bc20836.chunk.js"
   },
   {
-    "revision": "c609c24fb8e6a35a6f82",
-    "url": "/gestell/static/js/App.74881311.chunk.js"
+    "revision": "63425177139784ecbefc",
+    "url": "/gestell/static/js/App.69830fce.chunk.js"
   },
   {
     "revision": "bd191319cc180510c71c",
     "url": "/gestell/static/js/main.7d0573d9.chunk.js"
   },
   {
-    "revision": "ba497b1a443312aa7a89",
-    "url": "/gestell/static/js/runtime~main.9768c164.js"
+    "revision": "e29f2d01233568512377",
+    "url": "/gestell/static/js/runtime~main.42aa11ca.js"
   },
   {
     "revision": "a8c365a9e4595abe29d8",
