@@ -1,7 +1,7 @@
 {
   "name": "gogo-react",
   "version": "4.2.3",
-  "description": "Gogo - React Bootstrap 4 Admin Dashboard Template",
+  "description": "Desarrollo de dashboards para gestell méxico.",
   "private": true,
   "homepage": "https://javascriptmexico.github.io/gestell",
   "dependencies": {
