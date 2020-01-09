@@ -1,27 +1,26 @@
 import React, { Component, Fragment } from "react";
 import { Row } from "reactstrap";
-import IntlMessages from "../../../helpers/IntlMessages";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import {Pie} from 'react-chartjs-2';
 import {Bar} from 'react-chartjs-2';
 import Breadcrumb from "../../../containers/navs/Breadcrumb";
 const dataPie = {
 	labels: [
-		'Rojo',
-		'Azul',
+		'Verde',
+		'Más Verde',
 		'Amarillo'
 	],
 	datasets: [{
 		data: [300, 50, 100],
 		backgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
+		'#8fb51c',
+		'#297e36',
+		'#dda113'
 		],
 		hoverBackgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
+		'#8fb51c',
+		'#297e36',
+		'#dda113'
 		]
 	}]
 };
@@ -30,7 +29,7 @@ const data = {
   datasets: [
     {
       label: 'Mis datos de la Fundación',
-      backgroundColor: 'rgba(255,99,132,0.2)',
+      backgroundColor: 'rgba(24,41,46,0.5)',
       borderColor: 'rgba(255,99,132,1)',
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
@@ -67,9 +66,9 @@ export default class Start extends Component {
               <Colxx xxs="12" className="mb-4">
                 <Breadcrumb heading="menu.start" match={this.props.match} />
                 <Separator className="mb-3" />
-                <h1>SECCIÓN 1 - Análisis Exploratorio</h1>
+                <h1 className="m-0">SECCIÓN 1 - Análisis Exploratorio</h1>
                 <h2>Categoría 1: Perfilamiento de Datos - Sección 1 Análisis exploratorio</h2>
-                <h3>Reporte 1: Missings</h3>
+                <h3 style={{color: '#297e36'}}>Reporte 1: Missings</h3>
                 <Separator className="mb-3 mt-3"/>
               </Colxx>
             </Row>

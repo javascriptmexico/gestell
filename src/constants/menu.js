@@ -13,7 +13,7 @@ const data = [
       {
         icon: "lni-grid",
         label: "Outliers",
-        to: "/app/gogo/start"
+        to: "/app/gogo/rud"
       },
       {
         icon: "lni-signal",
