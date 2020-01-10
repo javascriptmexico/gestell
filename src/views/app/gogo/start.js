@@ -64,7 +64,6 @@ export default class Start extends Component {
             <Fragment>
             <Row>
               <Colxx xxs="12" className="mb-4">
-                <Breadcrumb heading="menu.start" match={this.props.match} />
                 <Separator className="mb-3" />
                 <h1 className="m-0">SECCIÓN 1 - Análisis Exploratorio</h1>
                 <h2>Categoría 1: Perfilamiento de Datos - Sección 1 Análisis exploratorio</h2>

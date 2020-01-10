@@ -18,7 +18,7 @@ const data = [
       {
         icon: "lni-signal",
         label: "Análisis de frecuencias",
-        to: "/app/gogo/start"
+        to: "/app/gogo/rut"
       }     
     ]
   },

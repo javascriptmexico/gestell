@@ -7,6 +7,9 @@ const Start = React.lazy(() =>
 const Rud = React.lazy(() =>
   import(/* webpackChunkName: "start" */ './rud')
 );
+const Rut = React.lazy(() =>
+  import(/* webpackChunkName: "start" */ './rut')
+);
 const Gogo = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
@@ -18,6 +21,10 @@ const Gogo = ({ match }) => (
       <Route
         path={`${match.url}/rud`}
         render={props => <Rud {...props} />}
+      />
+      <Route
+        path={`${match.url}/rut`}
+        render={props => <Rut {...props} />}
       />
       <Redirect to="/error" />
     </Switch>
