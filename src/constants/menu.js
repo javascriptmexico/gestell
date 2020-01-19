@@ -1,7 +1,7 @@
 const data = [
   {
     id: "gogo",
-    icon: "lni-target",
+    icon: "lni-cog",
     label: "Analisis exploratorio",
     to: "/app/gogo",
     subs: [
@@ -90,6 +90,19 @@ const data = [
         icon: "lni-files",
         label: "Reporte 3:  Mes con Mayor Índice de Errores",
         to: "/app/third-menu/thirddos"
+      }
+    ]
+  },
+  {
+    id: "fourth",
+    icon: "lni-cloudnetwork",
+    label: "Mapeo de Metadatos",
+    to: "/app/fourth-menu",
+    subs: [
+      {
+        icon: "lni-layers",
+        label: "Reporte 1: Mapeo de Metadatos",
+        to: "/app/fourth-menu/fourth"
       }
     ]
   }

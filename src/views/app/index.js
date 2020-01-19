@@ -13,6 +13,9 @@ const SecondMenu = React.lazy(() =>
 const ThirdMenu = React.lazy(() =>
   import(/* webpackChunkName: "viwes-second-menu" */ './third-menu')
 );
+const FourthMenu = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-second-menu" */ './fourth-menu')
+);
 
 class App extends Component {
   render() {
@@ -35,6 +38,10 @@ class App extends Component {
               <Route
                 path={`${match.url}/third-menu`}
                 render={props => <ThirdMenu {...props} />}
+              />
+              <Route
+                path={`${match.url}/fourth-menu`}
+                render={props => <FourthMenu {...props} />}
               />
               <Redirect to="/error" />
             </Switch>
