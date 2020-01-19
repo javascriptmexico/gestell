@@ -36,7 +36,7 @@ const data = [
       {
         icon: "lni-layers",
         label: "Top 10 de Columnas con Mayor Correlación (con cada columna)",
-        to: "/app/second-menu/second"
+        to: "/app/second-menu/seconduno"
       },
       {
         icon: "lni-database",

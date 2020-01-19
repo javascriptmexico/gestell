@@ -235,7 +235,7 @@ class TopNav extends Component {
               <i className="simple-icon-magnifier" />
             </span>
           </div>
-
+          {/* 
           <div className="d-inline-block">
             <UncontrolledDropdown className="ml-2">
               <DropdownToggle
@@ -260,7 +260,7 @@ class TopNav extends Component {
               </DropdownMenu>
             </UncontrolledDropdown>
           </div>
-          
+          */}
         </div>
         <a className="navbar-logo" href="/">
           <span className="logo d-none d-xs-block" />

@@ -9,8 +9,8 @@ export const menuHiddenBreakpoint = 768;
 export const defaultLocale = "en";
 export const localeOptions = [
   { id: "es", name: "Español", direction: "ltr" },
-  { id: "en", name: "English - LTR", direction: "ltr" },
-  { id: "enrtl", name: "English - RTL", direction: "rtl" }
+  { id: "en", name: "English", direction: "ltr" },
+  { id: "fr", name: "Francais", direction: "ltr" }
 ];
 
 export const searchPath = "/app/pages/search";

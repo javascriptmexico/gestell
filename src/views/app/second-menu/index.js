@@ -4,6 +4,9 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 const Second = React.lazy(() =>
   import(/* webpackChunkName: "second" */ './second')
 );
+const Seconduno = React.lazy(() =>
+  import(/* webpackChunkName: "second" */ './seconduno')
+);
 const SecondMenu = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
@@ -11,6 +14,10 @@ const SecondMenu = ({ match }) => (
       <Route
         path={`${match.url}/second`}
         render={props => <Second {...props} />}
+      />
+      <Route
+        path={`${match.url}/seconduno`}
+        render={props => <Seconduno {...props} />}
       />
       <Redirect to="/error" />
     </Switch>

@@ -80,7 +80,7 @@ export default class Rud extends Component {
                 <h4>Porcentaje de missings por columna</h4>
               </Colxx>
               <Colxx xxs="4" className="mb-4">
-                <h4>Outliers por cada variable numércia</h4>
+                <h4>Outliers por cada variable numérica</h4>
               </Colxx>
             </Row>
             <Row>
