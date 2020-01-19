@@ -74,66 +74,22 @@ const data = [
     id: "third",
     icon: "lni-target",
     label: "Análisis de variables categóricas",
-    to: "/app/third",
+    to: "/app/third-menu",
     subs: [
       {
         icon: "lni-layers",
-        label: "Missings",
-        to: "/app/third/start"
-      }    
-    ]
-  },
-  {
-    id: "blankpage",
-    icon: "lni-investment",
-    label: "Análisis de variables categóricas",
-    to: "/app/blank-page",
-    subs: [
-      {
-        icon: "lni-layers",
-        label: "Homologación",
-        to: "/app/second-menu/second"
+        label: "Reporte 1: Homologación",
+        to: "/app/third-menu/third"
       },
       {
-        icon: "lni-magnet",
-        label: "Errores más Comunes",
-        to: "/app/second-menu/second"
+        icon: "lni-control-panel",
+        label: "Reporte 2: Errores más Comunes",
+        to: "/app/third-menu/thirduno"
       },
       {
-        icon: "lni-target-audience",
-        label: "Top 10 de usuarios con mayor número de errores",
-        to: "/app/second-menu/second"
-      }
-    ]
-  },
-  {
-    id: "mapeo",
-    icon: "lni-layout",
-    label: "Mapeo de Metadatos",
-    to: "/app/blank-page",
-    subs: [
-      {
-        icon: "lni-layers",
-        label: "REPORTE 1",
-        to: "/app/second-menu/second"
-      }
-    ]
-  },
-  {
-    id: "docs",
-    icon: "lni-line-spacing",
-    label: "Comparativo Histórico del Perfilado",
-    to: "/app/blank-page",
-    subs: [
-      {
-        icon: "lni-layers",
-        label: "REPORTE 1",
-        to: "/app/second-menu/second"
-      },
-      {
-        icon: "lni-layers",
-        label: "REPORTE 2",
-        to: "/app/second-menu/second"
+        icon: "lni-files",
+        label: "Reporte 3:  Mes con Mayor Índice de Errores",
+        to: "/app/third-menu/thirddos"
       }
     ]
   }

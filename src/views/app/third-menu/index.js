@@ -4,7 +4,13 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 const Third = React.lazy(() =>
   import(/* webpackChunkName: "second" */ './third')
 );
-const SecondMenu = ({ match }) => (
+const Thirduno = React.lazy(() =>
+  import(/* webpackChunkName: "second" */ './thirduno')
+);
+const Thirddos = React.lazy(() =>
+  import(/* webpackChunkName: "second" */ './thirddos')
+);
+const ThirdMenu = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
       <Redirect exact from={`${match.url}/`} to={`${match.url}/third`} />
@@ -12,8 +18,16 @@ const SecondMenu = ({ match }) => (
         path={`${match.url}/third`}
         render={props => <Third {...props} />}
       />
+      <Route
+        path={`${match.url}/thirduno`}
+        render={props => <Thirduno {...props} />}
+      />
+      <Route
+        path={`${match.url}/thirddos`}
+        render={props => <Thirddos {...props} />}
+      />
       <Redirect to="/error" />
     </Switch>
   </Suspense>
 );
-export default SecondMenu;
+export default ThirdMenu;
