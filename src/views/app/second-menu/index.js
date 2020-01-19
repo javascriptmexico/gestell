@@ -7,6 +7,15 @@ const Second = React.lazy(() =>
 const Seconduno = React.lazy(() =>
   import(/* webpackChunkName: "second" */ './seconduno')
 );
+const Seconddos = React.lazy(() =>
+  import(/* webpackChunkName: "second" */ './seconddos')
+);
+const Secondtres = React.lazy(() =>
+  import(/* webpackChunkName: "second" */ './secondtres')
+);
+const Secondcuatro = React.lazy(() =>
+  import(/* webpackChunkName: "second" */ './secondcuatro')
+);
 const SecondMenu = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
@@ -18,6 +27,18 @@ const SecondMenu = ({ match }) => (
       <Route
         path={`${match.url}/seconduno`}
         render={props => <Seconduno {...props} />}
+      />
+      <Route
+        path={`${match.url}/seconddos`}
+        render={props => <Seconddos {...props} />}
+      />
+      <Route
+        path={`${match.url}/secondtres`}
+        render={props => <Secondtres {...props} />}
+      />
+      <Route
+        path={`${match.url}/secondcuatro`}
+        render={props => <Secondcuatro {...props} />}
       />
       <Redirect to="/error" />
     </Switch>

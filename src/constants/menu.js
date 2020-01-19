@@ -40,18 +40,18 @@ const data = [
       },
       {
         icon: "lni-database",
-        label: "Análisis Estadístico/ Descriptivo",
-        to: "/app/second-menu/second"
+        label: "Análisis Estadístico/Descriptivo",
+        to: "/app/second-menu/seconddos"
       },
       {
         icon: "lni-files",
         label: "Gráfico de Correlación entre dos variables",
-        to: "/app/second-menu/second"
+        to: "/app/second-menu/secondtres"
       },
       {
         icon: "lni-dashboard",
         label: "Gráfico Paralelo de Correlación entre más de dos variables",
-        to: "/app/second-menu/second"
+        to: "/app/second-menu/secondcuatro"
       },
       {
         icon: "lni-control-panel",
@@ -68,6 +68,19 @@ const data = [
         label: "Cantidad de Columnas perfiladas y utilizadas en el perfilamiento",
         to: "/app/second-menu/second"
       }
+    ]
+  },
+  {
+    id: "third",
+    icon: "lni-target",
+    label: "Análisis de variables categóricas",
+    to: "/app/third",
+    subs: [
+      {
+        icon: "lni-layers",
+        label: "Missings",
+        to: "/app/third/start"
+      }    
     ]
   },
   {
