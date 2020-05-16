@@ -1,28 +1,27 @@
 import React, { Component, Fragment } from "react";
-import { Row } from "reactstrap";
+import { Row, FormGroup, Label, Input, Table } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
-import {Pie} from 'react-chartjs-2';
-import {Bar} from 'react-chartjs-2';
-import Breadcrumb from "../../../containers/navs/Breadcrumb";
+import { Pie } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 const dataPie = {
-	labels: [
-		'Verde',
-		'Más Verde',
-		'Amarillo'
-	],
-	datasets: [{
-		data: [300, 50, 100],
-		backgroundColor: [
-		'#8fb51c',
-		'#297e36',
-		'#dda113'
-		],
-		hoverBackgroundColor: [
-		'#8fb51c',
-		'#297e36',
-		'#dda113'
-		]
-	}]
+  labels: [
+    'Verde',
+    'Más Verde',
+    'Amarillo'
+  ],
+  datasets: [{
+    data: [300, 50, 100],
+    backgroundColor: [
+      '#8fb51c',
+      '#297e36',
+      '#dda113'
+    ],
+    hoverBackgroundColor: [
+      '#8fb51c',
+      '#297e36',
+      '#dda113'
+    ]
+  }]
 };
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -39,78 +38,136 @@ const data = {
   ]
 };
 const dataPieDos = {
-	labels: [
-		'Approve',
-		'Disapprove',
-		'Undecided'
-	],
-	datasets: [{
-		data: [200, 150, 10],
-		backgroundColor: [
-		'#18292e',
-		'#85a261',
-		'#FFCE56'
-		],
-		hoverBackgroundColor: [
-		'#18292e',
-		'#85a261',
-		'#FFCE56'
-		]
-	}]
+  labels: [
+    'Approve',
+    'Disapprove',
+    'Undecided'
+  ],
+  datasets: [{
+    data: [200, 150, 10],
+    backgroundColor: [
+      '#18292e',
+      '#85a261',
+      '#FFCE56'
+    ],
+    hoverBackgroundColor: [
+      '#18292e',
+      '#85a261',
+      '#FFCE56'
+    ]
+  }]
 };
 export default class Start extends Component {
-    render() {
-        return (
-            <Fragment>
-            <Row>
-              <Colxx xxs="12" className="mb-4">
-                <Separator className="mb-3" />
-                <h1 className="m-0">SECCIÓN 1 - Análisis Exploratorio</h1>
-                <h2>Categoría 1: Perfilamiento de Datos - Sección 1 Análisis exploratorio</h2>
-                <h3 style={{color: '#297e36'}}>Reporte 1: Missings</h3>
-                <Separator className="mb-3 mt-3"/>
-              </Colxx>
-            </Row>
-            <Row>
-              <Colxx xxs="4" className="mb-4">
-                <h4>Detección de Missings:<br/>Top 10 Columnas con más Porcentaje de Missings</h4>
-              </Colxx>
-              <Colxx xxs="4" className="mb-4">
-                <h4>Porcentaje de missings por columna</h4>
-              </Colxx>
-              <Colxx xxs="4" className="mb-4">
-                <h4>Top 10 Columnas con más Porcentaje de Missings y Porcentaje de Missings por Columna</h4>
-              </Colxx>
-            </Row>
-            <Row>
-              <Colxx xxs="4" className="mb-4">
-                <Pie 
-                  data={dataPie}
-                  width={60}
-                  height={50}
-                  options={{ maintainAspectRatio: true }}
-                />
-              </Colxx>
-              <Colxx xxs="4" className="mb-4">
-                <Bar
-                  data={data}
-                  width={100}
-                  height={100}
-                  options={{
-                    maintainAspectRatio: true
-                  }}
-                />
-              </Colxx>
-              <Colxx xxs="4" className="mb-4">
-                <Pie 
-                  data={dataPieDos}
-                  width={60}
-                  height={50}
-                  options={{ maintainAspectRatio: true }}
-                />
-              </Colxx>
-            </Row>
-          </Fragment>
-        )
-    }
+  render() {
+    return (
+      <Fragment>
+        <Row>
+          <Colxx xxs="12" className="mb-4">
+            <Separator className="mb-3" />
+            <h1 className="m-0">REPORTE 1 - Validación de Estructura del Reporte</h1>
+            <Separator className="mb-3 mt-3" />
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="6" className="mb-6">
+            <h4>Gráfica 1:<br />Número de Errores de Estructura por etiqueta en reporte</h4>
+          </Colxx>
+          <Colxx xxs="6" className="mb-6">
+            <h4>Gráfica 2:<br />Tendencia de errores de estructura por etiqueta</h4>
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="6" className="mb-6">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <Pie
+              data={dataPie}
+              width={60}
+              height={50}
+              options={{ maintainAspectRatio: true }}
+            />
+          </Colxx>
+          <Colxx xxs="6" className="mb-6">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar año de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+              </Input>
+            </FormGroup>
+            <Line
+              data={data}
+              width={100}
+              height={80}
+            />
+          </Colxx>
+        </Row>
+        <Row style={{ marginTop: '20px' }}>
+          <Colxx xxs="12" className="mb-12">
+            <Separator className="mb-3" />
+            <h4>Gráfica 1:<br />Gráfica 3: Errores de estructura por etiqueta en reporte</h4>
+            <Separator className="mb-3 mt-3" />
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <Table>
+              <thead>
+                <tr>
+                  <th colSpan="6"> <h1 style={{ textAlign: 'center' }}>Archivo XXX</h1></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Número de registro</th>
+                  <td>Número de errores</td>
+                  <td>Etiquetas erróneas</td>
+                  <td>Mensaje de Error</td>
+                </tr>
+                <tr>
+                  <th rowSpan="6">MT 0001</th>
+                </tr>
+                <tr>
+                  <th rowSpan="6">4</th>
+                </tr>
+                <tr>
+                  <th scope="row">blc_aba</th>
+                  <td>Campo no es alfanúmerico</td>
+                </tr>
+                <tr>
+                  <th scope="row">Monto</th>
+                  <td>El campo excede lo dispuesto en el DOF</td>
+                </tr>
+                <tr>
+                  <th scope="row">Folio</th>
+                  <td>El folio contiene ceros a la izquierda</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mensaje</th>
+                  <td>El campo no contiene alfanúmericos</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Colxx>
+        </Row>
+      </Fragment >
+    )
+  }
 }

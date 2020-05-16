@@ -2,13 +2,13 @@ const data = [
   {
     id: "gogo",
     icon: "lni-cog",
-    label: "Analisis exploratorio",
-    to: "/app/gogo",
+    label: "Reporte 1: Validación de Estructura del Reporte",
+    to: "/app/",
     subs: [
       {
         icon: "lni-layers",
         label: "Missings",
-        to: "/app/gogo/start"
+        to: "/"
       },
       {
         icon: "lni-grid",
@@ -19,9 +19,10 @@ const data = [
         icon: "lni-signal",
         label: "Análisis de frecuencias",
         to: "/app/gogo/rut"
-      }     
+      }
     ]
   },
+  /*
   {
     id: "secondmenu",
     icon: "lni-check-mark-circle",
@@ -124,5 +125,6 @@ const data = [
       }
     ]
   }
+  */
 ];
 export default data;
