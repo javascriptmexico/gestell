@@ -3,7 +3,7 @@ const data = [
     id: "gogo",
     icon: "",
     label: "Reporte 1: Validación de Estructura del Reporte",
-    to: "/app/gogo/start"
+    to: "/app/"
   },
   {
     id: "secondmenu",
