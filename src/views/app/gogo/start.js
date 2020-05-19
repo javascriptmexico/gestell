@@ -37,6 +37,39 @@ const data = {
     }
   ]
 };
+const dataLinea = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  datasets: [
+    {
+      label: 'Mis datos de la Fundación',
+      backgroundColor: 'rgba(255,255,255,0.4)',
+      borderColor: 'rgba(3,3,3,1)',
+      borderWidth: 1,
+      lineTension: 0,
+      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+      hoverBorderColor: 'rgba(255,99,132,1)',
+      data: [0, 59, 80, 81, 56, 55, 80]
+    },
+    {
+      label: 'Mis datos de la empresa',
+      borderColor: 'rgba(255,99,132,1)',
+      borderWidth: 1,
+      lineTension: 0,
+      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+      hoverBorderColor: 'rgba(255,99,132,1)',
+      data: [0, 39, 70, 88, 56, 75, 90]
+    },
+    {
+      label: 'Mis datos de personales',
+      borderColor: 'rgba(0,255,0,1)',
+      borderWidth: 1,
+      lineTension: 0,
+      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+      hoverBorderColor: 'rgba(255,99,132,1)',
+      data: [0, 19, 30, 48, 56, 75, 50]
+    }
+  ]
+};
 const dataPieDos = {
   labels: [
     'Approve',
@@ -70,14 +103,14 @@ export default class Start extends Component {
         </Row>
         <Row>
           <Colxx xxs="6" className="mb-6">
-            <h4>Gráfica 1:<br />Número de Errores de Estructura por etiqueta en reporte</h4>
+            <h4>Número de Errores de Estructura por etiqueta en reporte</h4>
           </Colxx>
           <Colxx xxs="6" className="mb-6">
-            <h4>Gráfica 2:<br />Tendencia de errores de estructura por etiqueta</h4>
+            <h4>Tendencia de errores de estructura por etiqueta</h4>
           </Colxx>
         </Row>
         <Row>
-          <Colxx xxs="6" className="mb-6">
+          <Colxx xxs="5" className="mb-6">
             <FormGroup>
               <Label for="exampleSelect">Seleccionar mes de consulta</Label>
               <Input type="select" name="select" id="exampleSelect">
@@ -95,7 +128,8 @@ export default class Start extends Component {
               options={{ maintainAspectRatio: true }}
             />
           </Colxx>
-          <Colxx xxs="6" className="mb-6">
+          <Colxx xxs="2" className="mb-6"></Colxx>
+          <Colxx xxs="5" className="mb-6">
             <FormGroup>
               <Label for="exampleSelect">Seleccionar año de consulta</Label>
               <Input type="select" name="select" id="exampleSelect">
@@ -107,7 +141,7 @@ export default class Start extends Component {
               </Input>
             </FormGroup>
             <Line
-              data={data}
+              data={dataLinea}
               width={100}
               height={80}
             />
@@ -116,7 +150,7 @@ export default class Start extends Component {
         <Row style={{ marginTop: '20px' }}>
           <Colxx xxs="12" className="mb-12">
             <Separator className="mb-3" />
-            <h4>Gráfica 1:<br />Gráfica 3: Errores de estructura por etiqueta en reporte</h4>
+            <h4>Gráfica 3: Errores de estructura por etiqueta en reporte</h4>
             <Separator className="mb-3 mt-3" />
             <FormGroup>
               <Label for="exampleSelect">Seleccionar mes de consulta</Label>
@@ -128,18 +162,20 @@ export default class Start extends Component {
                 <option>Marzo</option>
               </Input>
             </FormGroup>
-            <Table>
+            <Table style={{ background: '#dedede' }}>
+              {/* 
               <thead>
                 <tr>
                   <th colSpan="6"> <h1 style={{ textAlign: 'center' }}>Archivo XXX</h1></th>
                 </tr>
               </thead>
+              */}
               <tbody>
                 <tr>
-                  <th scope="row">Número de registro</th>
-                  <td>Número de errores</td>
+                  <th scope="row">Número de errores</th>
                   <td>Etiquetas erróneas</td>
                   <td>Mensaje de Error</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <th rowSpan="6">MT 0001</th>

@@ -1,26 +1,15 @@
 const data = [
   {
     id: "gogo",
-    icon: "lni-cog",
+    icon: "",
     label: "Reporte 1: Validación de Estructura del Reporte",
-    to: "/app/",
-    subs: [
-      {
-        icon: "lni-layers",
-        label: "Missings",
-        to: "/"
-      },
-      {
-        icon: "lni-grid",
-        label: "Outliers",
-        to: "/app/gogo/rud"
-      },
-      {
-        icon: "lni-signal",
-        label: "Análisis de frecuencias",
-        to: "/app/gogo/rut"
-      }
-    ]
+    to: "/app/gogo/start"
+  },
+  {
+    id: "secondmenu",
+    icon: "",
+    label: "Reporte 2: Validación de Etiquetas",
+    to: "/app/second-menu"
   },
   /*
   {
