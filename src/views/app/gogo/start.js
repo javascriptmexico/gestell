@@ -150,7 +150,7 @@ export default class Start extends Component {
         <Row style={{ marginTop: '20px' }}>
           <Colxx xxs="12" className="mb-12">
             <Separator className="mb-3" />
-            <h4>Gráfica 3: Errores de estructura por etiqueta en reporte</h4>
+            <h4>Errores de estructura por etiqueta en reporte</h4>
             <Separator className="mb-3 mt-3" />
             <FormGroup>
               <Label for="exampleSelect">Seleccionar mes de consulta</Label>
@@ -172,10 +172,10 @@ export default class Start extends Component {
               */}
               <tbody>
                 <tr>
-                  <th scope="row">Número de errores</th>
-                  <td>Etiquetas erróneas</td>
-                  <td>Mensaje de Error</td>
-                  <td></td>
+                  <th scope="row">Número de Registro</th>
+                  <td scope="row">Número de errores</td>
+                  <td scope="row">Etiquetas erróneas</td>
+                  <td scope="row">Mensaje del Error</td>
                 </tr>
                 <tr>
                   <th rowSpan="6">MT 0001</th>

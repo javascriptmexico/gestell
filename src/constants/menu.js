@@ -11,6 +11,12 @@ const data = [
     label: "Reporte 2: Validación de Etiquetas",
     to: "/app/second-menu"
   },
+  {
+    id: "third",
+    icon: "",
+    label: "Errores en CURP/RFC",
+    to: "/app/third-menu",
+  },
   /*
   {
     id: "secondmenu",

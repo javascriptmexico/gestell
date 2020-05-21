@@ -175,19 +175,12 @@ export default class Second extends Component {
               </Input>
             </FormGroup>
             <Table style={{ background: '#dedede' }}>
-              {/* 
-              <thead>
-                <tr>
-                  <th colSpan="6"> <h1 style={{ textAlign: 'center' }}>Archivo XXX</h1></th>
-                </tr>
-              </thead>
-              */}
               <tbody>
                 <tr>
-                  <th scope="row">Número de errores</th>
-                  <td>Etiquetas erróneas</td>
-                  <td>Mensaje de Error</td>
-                  <td></td>
+                  <th scope="row">Número de Registro</th>
+                  <td scope="row">Número de errores</td>
+                  <td scope="row">Etiquetas erróneas</td>
+                  <td scope="row">Mensaje del Error</td>
                 </tr>
                 <tr>
                   <th rowSpan="6">MT 0001</th>
