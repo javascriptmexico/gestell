@@ -1,8 +1,33 @@
 import React, { Component, Fragment } from "react";
-import { Row } from "reactstrap";
+import { Row, FormGroup, Label, Input, Table } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
-import { Chart } from "react-google-charts";
-import Breadcrumb from "../../../containers/navs/Breadcrumb";
+import {
+  BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
+
+const data = [
+  {
+    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+  },
+  {
+    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+  },
+  {
+    name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+  },
+  {
+    name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+  },
+  {
+    name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+  },
+  {
+    name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+  },
+  {
+    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+  },
+];
 
 export default class Seconduno extends Component {
   render() {
@@ -11,92 +36,234 @@ export default class Seconduno extends Component {
         <Row>
           <Colxx xxs="12" className="mb-4">
             <Separator className="mb-3" />
-            <h1 className="m-0">REPORTE 2 - Validación de Etiquetas</h1>
+            <h1 className="m-0 p-0">Reporte 4 - Etiquetas relacionadas y reglas especiales</h1>
             <Separator className="mb-3 mt-3" />
           </Colxx>
         </Row>
         <Row>
-          <Colxx xxs="4" className="mb-4">
-            <Chart
-              width={'500px'}
-              height={'300px'}
-              chartType="Table"
-              loader={<div>Loading Chart</div>}
-              data={[
-                [
-                  { type: 'string', label: 'Name' },
-                  { type: 'number', label: 'Salary' },
-                  { type: 'boolean', label: 'Full Time Employee' },
-                ],
-                ['Mike', { v: 10000, f: '$10,000' }, true],
-                ['Jim', { v: 8000, f: '$8,000' }, false],
-                ['Alice', { v: 12500, f: '$12,500' }, true],
-                ['Bob', { v: 7000, f: '$7,000' }, true],
-              ]}
-              options={{
-                showRowNumber: true,
-              }}
-              rootProps={{ 'data-testid': '1' }}
-            />
+          <Colxx xxs="6" className="mb-6">
+            <h4><i class="lni lni-angle-double-right"></i> Etiquetas relacionadas a operaciones vacias cuando la etiqueta está presente</h4>
+            <hr />
+            <Table style={{
+              background: '#dedede',
+              display: 'block',
+              overflow: 'auto',
+              height: '290px'
+            }}>
+              <tbody>
+                <tr>
+                  <th scope="row">Número de Registro</th>
+                  <td scope="row">Campos vacios/inválidos que son obligatorios</td>
+                  <td scope="row">Fecha del reporte</td>
+                  <td scope="row">Nombre del Archivo</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>No existe el nombre del participante y existe la etiqueta vostro en el registro</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>No existe el nombre del participante y existe la etiqueta vostro en el registro</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>El nombre del participante excede lo dispuesto en el DOF</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>El nombre del participante excede lo dispuesto en el DOF</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+              </tbody>
+            </Table>
           </Colxx>
-          <Colxx xxs="8" className="mb-4">
-            <Chart
-              width={'100%'}
-              height={'400px'}
-              chartType="TreeMap"
-              loader={<div>Loading Chart</div>}
-              data={[
-                [
-                  'Location',
-                  'Parent',
-                  'Market trade volume (size)',
-                  'Market increase/decrease (color)',
-                ],
-                ['Global', null, 0, 0],
-                ['America', 'Global', 0, 0],
-                ['Europe', 'Global', 0, 0],
-                ['Asia', 'Global', 0, 0],
-                ['Australia', 'Global', 0, 0],
-                ['Africa', 'Global', 0, 0],
-                ['Brazil', 'America', 11, 10],
-                ['USA', 'America', 52, 31],
-                ['Mexico', 'America', 24, 12],
-                ['Canada', 'America', 16, -23],
-                ['France', 'Europe', 42, -11],
-                ['Germany', 'Europe', 31, -2],
-                ['Sweden', 'Europe', 22, -13],
-                ['Italy', 'Europe', 17, 4],
-                ['UK', 'Europe', 21, -5],
-                ['China', 'Asia', 36, 4],
-                ['Japan', 'Asia', 20, -12],
-                ['India', 'Asia', 40, 63],
-                ['Laos', 'Asia', 4, 34],
-                ['Mongolia', 'Asia', 1, -5],
-                ['Iran', 'Asia', 18, 13],
-                ['Pakistan', 'Asia', 11, -52],
-                ['Egypt', 'Africa', 21, 0],
-                ['S. Africa', 'Africa', 30, 43],
-                ['Sudan', 'Africa', 12, 2],
-                ['Congo', 'Africa', 10, 12],
-                ['Zaire', 'Africa', 8, 10],
-              ]}
-              options={{
-                minColor: '#f00',
-                midColor: '#ddd',
-                maxColor: '#0d0',
-                headerHeight: 15,
-                fontColor: 'black',
-                showScale: true,
-                generateTooltip: (row, size, value) => {
-                  return (
-                    '<div style="background:#fd9; padding:10px; border-style:solid"> ' +
-                    value +
-                    '</div>'
-                  )
-                },
+          <Colxx xxs="6" className="mb-6">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <BarChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 20, right: 30, left: 20, bottom: 5,
               }}
-              rootProps={{ 'data-testid': '3' }}
-            />
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+              <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
+              <Bar dataKey="uv" fill="#ffc658" />
+            </BarChart>
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="6" className="mb-6">
+            <hr />
+            <h4><i class="lni lni-angle-double-right"></i> Registro con Operación modificatoria pero sin información en la etiqueta 3.1.2.1</h4>
+            <hr />
+            <Table style={{
+              background: '#dedede',
+              display: 'block',
+              overflow: 'auto',
+              height: '290px'
+            }}>
+              <tbody>
+                <tr>
+                  <th scope="row">Número de Registro</th>
+                  <td scope="row">Campos vacios/inválidos que son obligatorios</td>
+                  <td scope="row">Fecha del reporte</td>
+                  <td scope="row">Nombre del Archivo</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>No existe el nombre del participante y existe la etiqueta vostro en el registro</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>No existe el nombre del participante y existe la etiqueta vostro en el registro</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>El nombre del participante excede lo dispuesto en el DOF</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>El nombre del participante excede lo dispuesto en el DOF</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Colxx>
+          <Colxx xxs="6" className="mb-6">
+            <hr />
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <BarChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 20, right: 30, left: 20, bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+              <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
+              <Bar dataKey="uv" fill="#ffc658" />
+            </BarChart>
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="6" className="mb-6">
+            <hr />
+            <h4><i class="lni lni-angle-double-right"></i> Registros con etiqueta vostro pero vacios o con información invalida en la etiqueta 3.1.5.3.1</h4>
+            <hr />
+            <Table style={{
+              background: '#dedede',
+              display: 'block',
+              overflow: 'auto',
+              height: '290px'
+            }}>
+              <tbody>
+                <tr>
+                  <th scope="row">Número de Registro</th>
+                  <td scope="row">Campos vacios/inválidos que son obligatorios</td>
+                  <td scope="row">Fecha del reporte</td>
+                  <td scope="row">Nombre del Archivo</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>No existe el nombre del participante y existe la etiqueta vostro en el registro</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>No existe el nombre del participante y existe la etiqueta vostro en el registro</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>El nombre del participante excede lo dispuesto en el DOF</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">34567</th>
+                  <td>El nombre del participante excede lo dispuesto en el DOF</td>
+                  <td>9022020</td>
+                  <td>TIF_FEB_2020</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Colxx>
+          <Colxx xxs="6" className="mb-6">
+            <hr />
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <BarChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 20, right: 30, left: 20, bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+              <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
+              <Bar dataKey="uv" fill="#ffc658" />
+            </BarChart>
           </Colxx>
         </Row>
       </Fragment>

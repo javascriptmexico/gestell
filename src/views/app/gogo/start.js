@@ -97,16 +97,16 @@ export default class Start extends Component {
         <Row>
           <Colxx xxs="12" className="mb-4">
             <Separator className="mb-3" />
-            <h1 className="m-0">REPORTE 1 - Validación de Estructura del Reporte</h1>
+            <h1 className="m-0 p-0">REPORTE 1 - Validación de Estructura del Reporte</h1>
             <Separator className="mb-3 mt-3" />
           </Colxx>
         </Row>
         <Row>
           <Colxx xxs="6" className="mb-6">
-            <h4>Número de Errores de Estructura por etiqueta en reporte</h4>
+            <h4><i class="lni lni-angle-double-right"></i> Número de Errores de Estructura por etiqueta en reporte</h4>
           </Colxx>
           <Colxx xxs="6" className="mb-6">
-            <h4>Tendencia de errores de estructura por etiqueta</h4>
+            <h4><i class="lni lni-angle-double-right"></i> Tendencia de errores de estructura por etiqueta</h4>
           </Colxx>
         </Row>
         <Row>
@@ -150,7 +150,7 @@ export default class Start extends Component {
         <Row style={{ marginTop: '20px' }}>
           <Colxx xxs="12" className="mb-12">
             <Separator className="mb-3" />
-            <h4>Errores de estructura por etiqueta en reporte</h4>
+            <h4><i class="lni lni-angle-double-right"></i> Errores de estructura por etiqueta en reporte</h4>
             <Separator className="mb-3 mt-3" />
             <FormGroup>
               <Label for="exampleSelect">Seleccionar mes de consulta</Label>

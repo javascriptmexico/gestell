@@ -3,8 +3,7 @@ import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Sector
 } from 'recharts';
 import { Chart } from "react-google-charts";
-import { Doughnut } from 'react-chartjs-2';
-import { Row, Table } from "reactstrap";
+import { Row, FormGroup, Label, Input, Table } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 
 const data = [
@@ -52,30 +51,58 @@ const dataDOS = {
   }]
 };
 
+const data01 = [
+  { name: 'Group A', value: 400 }, { name: 'Group B', value: 300 },
+  { name: 'Group C', value: 300 }, { name: 'Group D', value: 200 },
+];
+const data02 = [
+  { name: 'A1', value: 100 },
+  { name: 'A2', value: 300 },
+  { name: 'B1', value: 100 },
+  { name: 'B2', value: 80 },
+  { name: 'B3', value: 40 },
+  { name: 'B4', value: 30 },
+  { name: 'B5', value: 50 },
+  { name: 'C1', value: 100 },
+  { name: 'C2', value: 200 },
+  { name: 'D1', value: 150 },
+  { name: 'D2', value: 50 },
+];
+
 export default class Third extends Component {
   render() {
     return (
-      <Fragment>
+      <Fragment style={{ width: '100%', overflow: 'hidden' }}>
         <Row>
           <Colxx xxs="12" className="mb-4">
             <Separator className="mb-3" />
-            <h1 className="m-0">Errores en CURP / RFC</h1>
+            <h1 className="m-0 p-0">REPORTE 3 - Errores en CURP / RFC</h1>
             <Separator className="mb-3 mt-3" />
           </Colxx>
         </Row>
         <Row>
-          <Colxx xxs="3" className="mb-6">
-            <h4>Número de errores de contenido en RFC/CURP por mes</h4>
+          <Colxx xxs="3" className="mb-6 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Número de errores de contenido en RFC/CURP por mes</h4>
           </Colxx>
-          <Colxx xxs="6" className="mb-6">
-            <h4>Personas físicas con errores en CURP</h4>
+          <Colxx xxs="6" className="mb-6 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Personas físicas con errores en CURP</h4>
           </Colxx>
-          <Colxx xxs="3" className="mb-6">
-            <h4>Personas Físicas con CURP invalido y personas morales con RFC invalido</h4>
+          <Colxx xxs="3" className="mb-6 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Personas Físicas con CURP invalido y personas morales con RFC invalido</h4>
           </Colxx>
         </Row>
         <Row>
-          <Colxx xxs="3" className="mb-4">
+          <Colxx xxs="3" className="mb-1">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
             <BarChart
               width={300}
               height={300}
@@ -93,8 +120,23 @@ export default class Third extends Component {
               <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
             </BarChart>
           </Colxx>
-          <Colxx xxs="6" className="mb-4">
-            <Table style={{ background: '#dedede' }}>
+          <Colxx xxs="6" className="mb-1">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <Table style={{
+              background: '#dedede',
+              display: 'block',
+              overflow: 'auto',
+              height: '250px'
+            }}>
               <tbody>
                 <tr>
                   <th colSpan="5">Personas Físicas con Errores en CURP</th>
@@ -127,24 +169,66 @@ export default class Third extends Component {
                   <td scope="row">PEG0834809JHFEWOF</td>
                   <td scope="row">MT10001</td>
                 </tr>
+                <tr>
+                  <th scope="row">Juan</th>
+                  <td scope="row">Perez</td>
+                  <td scope="row">Gómez</td>
+                  <td scope="row">PEG0834809JHFEWOF</td>
+                  <td scope="row">MT10001</td>
+                </tr>
+                <tr>
+                  <th scope="row">Juan</th>
+                  <td scope="row">Perez</td>
+                  <td scope="row">Gómez</td>
+                  <td scope="row">PEG0834809JHFEWOF</td>
+                  <td scope="row">MT10001</td>
+                </tr>
               </tbody>
             </Table>
           </Colxx>
-          <Colxx xxs="3" className="mb-4">
-            <Doughnut data={dataDOS} />
+          <Colxx xxs="3" className="mb-1">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <PieChart width={400} height={400}>
+              <Pie data={data01} dataKey="value" cx={120} cy={120} outerRadius={60} fill="#8884d8" />
+              <Pie data={data02} dataKey="value" cx={120} cy={120} innerRadius={70} outerRadius={90} fill="#82ca9d" label />
+            </PieChart>
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="6" className="mb-4 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Personas físicas con CURP inválidos/Personas morales con RFC Inválido</h4>
+          </Colxx>
+          <Colxx xxs="6" className="mb-4 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Tabla con errores relacionados por registro</h4>
           </Colxx>
         </Row>
         <Row>
           <Colxx xxs="6" className="mb-4">
-            <h4>Personas físicas con CURP inválidos/Personas morales con RFC Inválido</h4>
-          </Colxx>
-          <Colxx xxs="6" className="mb-4">
-            <h4>Tabla con errores relacionados por registro</h4>
-          </Colxx>
-        </Row>
-        <Row>
-          <Colxx xxs="6" className="mb-4">
-            <Table style={{ background: '#dedede' }}>
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <Table style={{
+              background: '#dedede',
+              display: 'block',
+              overflow: 'auto',
+              height: '250px'
+            }}>
               <tbody>
                 <tr>
                   <th colSpan="5">Personas Físicas con Errores en RFC</th>
@@ -177,11 +261,47 @@ export default class Third extends Component {
                   <td scope="row">PEG0834809JHFEWOF</td>
                   <td scope="row">MT10001</td>
                 </tr>
+                <tr>
+                  <th scope="row">Juan</th>
+                  <td scope="row">Perez</td>
+                  <td scope="row">Gómez</td>
+                  <td scope="row">PEG0834809JHFEWOF</td>
+                  <td scope="row">MT10001</td>
+                </tr>
+                <tr>
+                  <th scope="row">Juan</th>
+                  <td scope="row">Perez</td>
+                  <td scope="row">Gómez</td>
+                  <td scope="row">PEG0834809JHFEWOF</td>
+                  <td scope="row">MT10001</td>
+                </tr>
+                <tr>
+                  <th scope="row">Juan</th>
+                  <td scope="row">Perez</td>
+                  <td scope="row">Gómez</td>
+                  <td scope="row">PEG0834809JHFEWOF</td>
+                  <td scope="row">MT10001</td>
+                </tr>
               </tbody>
             </Table>
           </Colxx>
           <Colxx xxs="6" className="mb-4">
-            <Table style={{ background: '#dedede' }}>
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <Table style={{
+              background: '#dedede',
+              display: 'block',
+              overflow: 'auto',
+              height: '250px'
+            }}>
               <tbody>
                 <tr>
                   <th colSpan="5">Archivo XXX</th>

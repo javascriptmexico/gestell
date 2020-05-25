@@ -3,7 +3,6 @@ import { Row, FormGroup, Label, Input, Table } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import { Doughnut, Line, Bar } from 'react-chartjs-2';
 
-
 export default class Second extends Component {
   data = {
     labels: [
@@ -78,19 +77,19 @@ export default class Second extends Component {
         <Row>
           <Colxx xxs="12" className="mb-4">
             <Separator className="mb-3" />
-            <h1 className="m-0">REPORTE 2 - Validación de Etiquetas</h1>
+            <h1 className="m-0 p-0"><i class="lni lni-angle-double-right"></i> REPORTE 2 - Validación de Etiquetas</h1>
             <Separator className="mb-3 mt-3" />
           </Colxx>
         </Row>
         <Row>
-          <Colxx xxs="4" className="mb-6">
-            <h4>Número de errores de contenido en etiquetas por reporte</h4>
+          <Colxx xxs="4" className="mb-6 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Número de errores de contenido en etiquetas por reporte</h4>
           </Colxx>
-          <Colxx xxs="4" className="mb-6">
-            <h4>Tendencia de errores de contenido por etiqueta</h4>
+          <Colxx xxs="4" className="mb-6 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Tendencia de errores de contenido por etiqueta</h4>
           </Colxx>
-          <Colxx xxs="4" className="mb-6">
-            <h4>Errores en etiquetas por mal uso de catálogos</h4>
+          <Colxx xxs="4" className="mb-6 d-flex align-items-center">
+            <h4><i class="lni lni-angle-double-right"></i> Errores en etiquetas por mal uso de catálogos</h4>
           </Colxx>
         </Row>
         <Row>
@@ -142,10 +141,10 @@ export default class Second extends Component {
         </Row>
         <Row>
           <Colxx xxs="6" className="mb-6">
-            <h4>Tipos de errores encontrados en cada etiqueta</h4>
+            <h4><i class="lni lni-angle-double-right"></i> Tipos de errores encontrados en cada etiqueta</h4>
           </Colxx>
           <Colxx xxs="6" className="mb-6">
-            <h4>Campos erroneos por reporte</h4>
+            <h4><i class="lni lni-angle-double-right"></i> Campos erroneos por reporte</h4>
           </Colxx>
         </Row>
         <Row>
