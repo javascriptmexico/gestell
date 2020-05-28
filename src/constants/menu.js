@@ -27,7 +27,7 @@ const data = [
     id: "fifth",
     icon: "",
     label: "Reporte 5: Visualizador de registros y etiquetas",
-    to: "/app/third-menu",
+    to: "/app/second-menu/seconddos",
   },
   {
     id: "sixth",

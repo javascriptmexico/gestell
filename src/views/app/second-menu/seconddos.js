@@ -1,92 +1,152 @@
 import React, { Component, Fragment } from "react";
-import { Row } from "reactstrap";
+import { Row, FormGroup, Label, Input } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
-import { Chart } from "react-google-charts";
-import Breadcrumb from "../../../containers/navs/Breadcrumb";
+import {
+  PieChart, Pie,
+} from 'recharts';
+import './Secondmenu.css';
+import Tree from 'react-d3-tree';
+import './Secondmenu.css';
 
-export default class Seconddos extends Component {
-    render() {
-        return (
-            <Fragment>
-            <Row>
-              <Colxx xxs="12" className="mb-4">
-                <Separator className="mb-3" />
-                <h1 className="m-0">SECCIÓN 2 - Análisis Estadístico/Descriptivo de los datos</h1>
-                <h2>Categoría 1: Perfilamiento de Datos - Sección 2 Estadístico Descriptivo</h2>
-                <h3 style={{color: '#e3a511'}}>Reporte 5 -Gráfico Paralelo de Correlación entre más de dos variables</h3>
-                <Separator className="mb-3 mt-3"/>
-              </Colxx>
-            </Row>
-            <Row>
-              <Colxx xxs="12" className="mb-4">
-              <Chart
-                width={'100%'}
-                height={'500px'}
-                chartType="Sankey"
-                loader={<div>Loading Chart</div>}
-                options={{
-                    sankey: {
-                    link: { color: { fill: '#d799ae' } },
-                    node: {
-                        colors: ['#a61d4c'],
-                        label: { color: '#871b47' },
-                    },
-                    },
-                }}
-                data={[
-                    ['From', 'To', 'Weight'],
-                    ['Brazil', 'Portugal', 5],
-                    ['Brazil', 'France', 1],
-                    ['Brazil', 'Spain', 1],
-                    ['Brazil', 'England', 1],
-                    ['Canada', 'Portugal', 1],
-                    ['Canada', 'France', 5],
-                    ['Canada', 'England', 1],
-                    ['Mexico', 'Portugal', 1],
-                    ['Mexico', 'France', 1],
-                    ['Mexico', 'Spain', 5],
-                    ['Mexico', 'England', 1],
-                    ['USA', 'Portugal', 1],
-                    ['USA', 'France', 1],
-                    ['USA', 'Spain', 1],
-                    ['USA', 'England', 5],
-                    ['Portugal', 'Angola', 2],
-                    ['Portugal', 'Senegal', 1],
-                    ['Portugal', 'Morocco', 1],
-                    ['Portugal', 'South Africa', 3],
-                    ['France', 'Angola', 1],
-                    ['France', 'Senegal', 3],
-                    ['France', 'Mali', 3],
-                    ['France', 'Morocco', 3],
-                    ['France', 'South Africa', 1],
-                    ['Spain', 'Senegal', 1],
-                    ['Spain', 'Morocco', 3],
-                    ['Spain', 'South Africa', 1],
-                    ['England', 'Angola', 1],
-                    ['England', 'Senegal', 1],
-                    ['England', 'Morocco', 2],
-                    ['England', 'South Africa', 7],
-                    ['South Africa', 'China', 5],
-                    ['South Africa', 'India', 1],
-                    ['South Africa', 'Japan', 3],
-                    ['Angola', 'China', 5],
-                    ['Angola', 'India', 1],
-                    ['Angola', 'Japan', 3],
-                    ['Senegal', 'China', 5],
-                    ['Senegal', 'India', 1],
-                    ['Senegal', 'Japan', 3],
-                    ['Mali', 'China', 5],
-                    ['Mali', 'India', 1],
-                    ['Mali', 'Japan', 3],
-                    ['Morocco', 'China', 5],
-                    ['Morocco', 'India', 1],
-                    ['Morocco', 'Japan', 3],
-                ]}
-                rootProps={{ 'data-testid': '3' }}
-                />
-              </Colxx>
-            </Row>
-          </Fragment>
-        )
-    }
+const myTreeData = [
+  {
+    name: 'Top Level',
+    attributes: {
+      keyA: 'val A',
+      keyB: 'val B',
+      keyC: 'val C',
+    },
+    nodeSvgShape: {
+      shapeProps: {
+        fill: 'blue',
+        x: 150,
+        y: 150,
+      },
+    },
+    children: [
+      {
+        name: 'Level 2: A',
+        attributes: {
+          keyA: 'val A',
+          keyB: 'val B',
+          keyC: 'val C',
+        },
+      },
+      {
+        name: 'Level 2: B',
+      },
+    ],
+  },
+];
+
+const data01 = [
+  { name: 'Group A', value: 400 }, { name: 'Group B', value: 300 },
+  { name: 'Group C', value: 300 }, { name: 'Group D', value: 200 },
+];
+const data02 = [
+  { name: 'A1', value: 100 },
+  { name: 'A2', value: 300 },
+  { name: 'B1', value: 100 },
+  { name: 'B2', value: 80 },
+  { name: 'B3', value: 40 },
+  { name: 'B4', value: 30 },
+  { name: 'B5', value: 50 },
+  { name: 'C1', value: 100 },
+  { name: 'C2', value: 200 },
+  { name: 'D1', value: 150 },
+  { name: 'D2', value: 50 },
+];
+const data03 = [
+  { name: 'A1', value: 100 },
+  { name: 'A2', value: 300 },
+  { name: 'B1', value: 100 },
+  { name: 'B2', value: 80 },
+  { name: 'B3', value: 40 },
+  { name: 'B4', value: 30 },
+  { name: 'B5', value: 50 },
+  { name: 'C1', value: 100 },
+  { name: 'C2', value: 200 },
+  { name: 'D1', value: 150 },
+  { name: 'D2', value: 50 },
+];
+
+export default class Start extends Component {
+
+  render() {
+    return (
+      <Fragment>
+        <Row>
+          <Colxx xxs="12" className="mb-4">
+            <Separator className="mb-3" />
+            <h1 className="m-0 p-0">REPORTE 5 - Visualizador de registros y etiquetas</h1>
+            <Separator className="mb-3 mt-3" />
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="6" className="mb-6 d-flex align-items-center">
+            <h4><i className="lni lni-angle-double-right"></i> Composición del reporte</h4>
+          </Colxx>
+          <Colxx xxs="6" className="mb-6 d-flex align-items-center">
+            <h4><i className="lni lni-angle-double-right"></i> Visualización de registro individual</h4>
+          </Colxx>
+        </Row>
+        <Row>
+          <Colxx xxs="5" className="mb-6">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar trimestre de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+            <PieChart width={400} height={400}>
+              <Pie data={data01} dataKey="value" cx={200} cy={200} outerRadius={60} fill="#8884d8" />
+              <Pie data={data02} dataKey="value" cx={200} cy={200} innerRadius={70} outerRadius={90} fill="#333" label />
+              <Pie data={data03} dataKey="value" cx={200} cy={200} innerRadius={100} outerRadius={130} fill="#82ca9d" label />
+            </PieChart>
+          </Colxx>
+          <Colxx xxs="2" className="mb-6"></Colxx>
+          <Colxx xxs="5" className="mb-6">
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar trimestre de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+              </Input>
+            </FormGroup>
+            <div id="container" class="svg-container">
+              <div id="treeWrapper" style={{ width: '100%', height: '250px' }}>
+                <Tree data={myTreeData} nodeSvgShape={myTreeData.shape} />
+              </div>
+            </div>
+
+          </Colxx>
+        </Row>
+        <Row style={{ marginTop: '20px' }}>
+          <Colxx xxs="12" className="mb-12">
+            <Separator className="mb-3" />
+            <h4><i className="lni lni-angle-double-right"></i> Errores de estructura por etiqueta en reporte</h4>
+            <Separator className="mb-3 mt-3" />
+            <FormGroup>
+              <Label for="exampleSelect">Seleccionar mes de consulta</Label>
+              <Input type="select" name="select" id="exampleSelect">
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Marzo</option>
+              </Input>
+            </FormGroup>
+
+          </Colxx>
+        </Row>
+      </Fragment >
+    )
+  }
 }
