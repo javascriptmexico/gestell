@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Row, FormGroup, Label, Input, Table } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import {
-  BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
 const data = [
@@ -95,23 +95,27 @@ export default class Seconduno extends Component {
                 <option>Marzo</option>
               </Input>
             </FormGroup>
-            <BarChart
-              width={500}
-              height={300}
-              data={data}
-              margin={{
-                top: 20, right: 30, left: 20, bottom: 5,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-              <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
-              <Bar dataKey="uv" fill="#ffc658" />
-            </BarChart>
+            <ResponsiveContainer width={700} height="80%">
+              <BarChart
+                width="80%"
+                height={300}
+                data={data}
+                margin={{
+                  top: 10, right: 0, left: 0, bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+                <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
+                <Bar dataKey="uv" fill="#ffc658" />
+              </BarChart>
+            </ResponsiveContainer>
+
+
           </Colxx>
         </Row>
         <Row>

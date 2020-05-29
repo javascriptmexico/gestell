@@ -32,20 +32,20 @@ const data = [
   {
     id: "sixth",
     icon: "",
-    label: "Reporte 6: Flujos de Trasnferencias Internacionales de Fondos Enviados fuera de México",
-    to: "/app/third-menu",
+    label: "Reporte 6: Flujos de Transferencias Internacionales de Fondos enviadas fuera de México",
+    to: "/app/second-menu/secondtres",
   },
   {
     id: "seventh",
     icon: "",
-    label: "Reporte 7: Flujos de Trasnferencias Internacionales de Fondos Enviados a México",
-    to: "/app/second-menu/second",
+    label: "Reporte 7: Flujos de Transferencias Internacionales de Fondos enviadas a México",
+    to: "/app/second-menu/secondcuatro",
   },
   {
     id: "eigth",
     icon: "",
     label: "Reporte 8: Transferencias Internacionales de Fondos de Personas Físicas mayores de 80 años, menores de edad y Personas Morales con menos de 3 años de constitución",
-    to: "/app/third-menu",
+    to: "/app/second-menu/secondcinco",
   },
   /*
   {

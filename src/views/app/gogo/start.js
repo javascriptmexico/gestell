@@ -124,7 +124,7 @@ export default class Start extends Component {
             <Pie
               data={dataPie}
               width={60}
-              height={50}
+              height={40}
               options={{ maintainAspectRatio: true }}
             />
           </Colxx>
@@ -143,7 +143,7 @@ export default class Start extends Component {
             <Line
               data={dataLinea}
               width={100}
-              height={80}
+              height={65}
             />
           </Colxx>
         </Row>

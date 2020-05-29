@@ -173,38 +173,40 @@ export default class Second extends Component {
                 <option>Marzo</option>
               </Input>
             </FormGroup>
-            <Table style={{ background: '#dedede' }}>
-              <tbody>
-                <tr>
-                  <th scope="row">Número de Registro</th>
-                  <td scope="row">Número de errores</td>
-                  <td scope="row">Etiquetas erróneas</td>
-                  <td scope="row">Mensaje del Error</td>
-                </tr>
-                <tr>
-                  <th rowSpan="6">MT 0001</th>
-                </tr>
-                <tr>
-                  <th rowSpan="6">4</th>
-                </tr>
-                <tr>
-                  <th scope="row">blc_aba</th>
-                  <td>Campo no es alfanúmerico</td>
-                </tr>
-                <tr>
-                  <th scope="row">Monto</th>
-                  <td>El campo excede lo dispuesto en el DOF</td>
-                </tr>
-                <tr>
-                  <th scope="row">Folio</th>
-                  <td>El folio contiene ceros a la izquierda</td>
-                </tr>
-                <tr>
-                  <th scope="row">Mensaje</th>
-                  <td>El campo no contiene alfanúmericos</td>
-                </tr>
-              </tbody>
-            </Table>
+            <div style={{ height: '250px', overflow: 'auto' }}>
+              <Table style={{ background: '#dedede' }}>
+                <tbody>
+                  <tr>
+                    <th scope="row">Número de Registro</th>
+                    <td scope="row">Número de errores</td>
+                    <td scope="row">Etiquetas erróneas</td>
+                    <td scope="row">Mensaje del Error</td>
+                  </tr>
+                  <tr>
+                    <th rowSpan="6">MT 0001</th>
+                  </tr>
+                  <tr>
+                    <th rowSpan="6">4</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">blc_aba</th>
+                    <td>Campo no es alfanúmerico</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Monto</th>
+                    <td>El campo excede lo dispuesto en el DOF</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Folio</th>
+                    <td>El folio contiene ceros a la izquierda</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mensaje</th>
+                    <td>El campo no contiene alfanúmericos</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
           </Colxx>
         </Row>
       </Fragment>
