@@ -125,7 +125,6 @@ export default class Start extends Component {
                 <Tree data={myTreeData} nodeSvgShape={myTreeData.shape} />
               </div>
             </div>
-
           </Colxx>
         </Row>
         <Row style={{ marginTop: '20px' }}>
