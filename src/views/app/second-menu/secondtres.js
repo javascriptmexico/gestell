@@ -51,6 +51,49 @@ export default class Secondtres extends Component {
 
     this.chart = chart;
 
+    let chartTest = am4core.create("chartTest", am4charts.SankeyDiagram);
+
+    chartTest.paddingRight = 20;
+
+    chartTest.data = [
+      { from: "A", to: "D", value: 10 },
+      { from: "B", to: "D", value: 8 },
+      { from: "B", to: "E", value: 4 },
+      { from: "C", to: "E", value: 3 },
+      { from: "D", to: "G", value: 5 },
+      { from: "D", to: "I", value: 2 },
+      { from: "D", to: "H", value: 3 },
+      { from: "E", to: "H", value: 6 },
+      { from: "G", to: "J", value: 5 },
+      { from: "I", to: "J", value: 1 },
+      { from: "H", to: "J", value: 9 }
+    ];
+
+    let hoverStatechartTest = chartTest.links.template.states.create("hover");
+    hoverStatechartTest.properties.fillOpacity = 0.6;
+
+    chartTest.dataFields.fromName = "from";
+    chartTest.dataFields.toName = "to";
+    chartTest.dataFields.value = "value";
+
+    // for right-most label to fit
+    chartTest.paddingRight = 30;
+
+    // make nodes draggable
+    var nodeTemplate = chartTest.nodes.template;
+    nodeTemplate.inert = true;
+    nodeTemplate.readerTitle = "Drag me!";
+    nodeTemplate.showSystemTooltip = true;
+    nodeTemplate.width = 20;
+
+    // make nodes draggable
+    var nodeTemplate = chartTest.nodes.template;
+    nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+    nodeTemplate.showSystemTooltip = true;
+    nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer
+
+    this.chartTest = chartTest;
+
     var chart2 = am4core.create("chartdiv2", am4charts.XYChart);
 
     chart2.data = [{
@@ -110,7 +153,68 @@ export default class Secondtres extends Component {
 
     chart2.legend = new am4charts.Legend();
 
-    this.chart2 = chart2;
+    this.chart2Test = chart2Test;
+
+    var chart2Test = am4core.create("chart2Test", am4charts.XYChart);
+
+    chart2Test.data = [{
+      "year": "2003",
+      "europe": 2.5,
+      "namerica": 2.5,
+      "asia": 2.1,
+      "lamerica": 1.2,
+      "meast": 0.2,
+      "africa": 0.1
+    }, {
+      "year": "2004",
+      "europe": 2.6,
+      "namerica": 2.7,
+      "asia": 2.2,
+      "lamerica": 1.3,
+      "meast": 0.3,
+      "africa": 0.1
+    }, {
+      "year": "2005",
+      "europe": 2.8,
+      "namerica": 2.9,
+      "asia": 2.4,
+      "lamerica": 1.4,
+      "meast": 0.3,
+      "africa": 0.1
+    }];
+
+    var categoryAxis = chart2Test.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "year";
+    categoryAxis.title.text = "Local country offices";
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.minGridDistance = 20;
+    categoryAxis.renderer.cellStartLocation = 0.1;
+    categoryAxis.renderer.cellEndLocation = 0.9;
+
+    var valueAxis = chart2Test.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.min = 0;
+    valueAxis.title.text = "Expenditure (M)";
+
+    function createSeriesTest(field, name, stacked) {
+      var series = chart2Test.series.push(new am4charts.ColumnSeries());
+      series.dataFields.valueY = field;
+      series.dataFields.categoryX = "year";
+      series.name = name;
+      series.columns.template.tooltipText = "{name}: [bold]{valueY}[/]";
+      series.stacked = stacked;
+      series.columns.template.width = am4core.percent(95);
+    }
+
+    createSeriesTest("europe", "Europe", false);
+    createSeriesTest("namerica", "North America", true);
+    createSeriesTest("asia", "Asia", false);
+    createSeriesTest("lamerica", "Latin America", true);
+    createSeriesTest("meast", "Middle East", true);
+    createSeriesTest("africa", "Africa", true);
+
+    chart2Test.legend = new am4charts.Legend();
+
+    this.chart2Test = chart2Test;
   }
 
   componentWillUnmount() {
@@ -192,7 +296,7 @@ export default class Secondtres extends Component {
                 <option>2024</option>
               </Input>
             </FormGroup>
-            <div id="chartdiv" style={{ width: "100%", height: "350px" }}></div>
+            <div id="chartTest" style={{ width: "100%", height: "350px" }}></div>
           </Colxx>
           <Colxx xxs="6" className="mb-6">
             <FormGroup>
@@ -205,7 +309,7 @@ export default class Secondtres extends Component {
                 <option>2024</option>
               </Input>
             </FormGroup>
-            <div id="chartdiv2" style={{ width: "100%", height: "350px" }}></div>
+            <div id="chart2Test" style={{ width: "100%", height: "350px" }}></div>
           </Colxx>
         </Row>
       </Fragment>

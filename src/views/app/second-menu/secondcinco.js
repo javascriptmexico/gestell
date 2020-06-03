@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Row, FormGroup, Label, Input } from "reactstrap";
+import { Row, FormGroup, Label, Input, Table } from "reactstrap";
 import { Colxx, Separator } from "../../../components/common/CustomBootstrap";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
@@ -174,7 +174,85 @@ export default class Secondcinco extends Component {
                                 <option>2024</option>
                             </Input>
                         </FormGroup>
-                        <div id="chartdiv" style={{ width: "100%", height: "350px" }}></div>
+                        <Table style={{
+                            background: '#dedede',
+                            display: 'block',
+                            overflow: 'auto',
+                            height: '290px'
+                        }}>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Nombre</th>
+                                    <td scope="row">Apellido Paterno</td>
+                                    <td scope="row">Apellido Materno</td>
+                                    <td scope="row">Fecha de Nacimiento</td>
+                                    <td scope="row">Edad (años)</td>
+                                    <td scope="row">Envío/Recepción</td>
+                                    <td scope="row">Moneda</td>
+                                    <td scope="row">Monto</td>
+                                    <td scope="row">País Destino</td>
+                                    <td scope="row">Países que envía a México</td>
+                                    <td scope="row">Países destino de baja imposición fiscal</td>
+                                    <td scope="row">Beneficiarios Envío</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Alejandro</th>
+                                    <td>Juarez</td>
+                                    <td>Vazquez</td>
+                                    <td>19092020</td>
+                                    <td>35</td>
+                                    <td>Envío</td>
+                                    <td>USD</td>
+                                    <td>$ 1,909,000,788.00</td>
+                                    <td>Canadá</td>
+                                    <td>N/A</td>
+                                    <td>No</td>
+                                    <td>GoldCorp Inc</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Alejandro</th>
+                                    <td>Juarez</td>
+                                    <td>Vazquez</td>
+                                    <td>19092020</td>
+                                    <td>35</td>
+                                    <td>Envío</td>
+                                    <td>USD</td>
+                                    <td>$ 1,909,000,788.00</td>
+                                    <td>Canadá</td>
+                                    <td>N/A</td>
+                                    <td>No</td>
+                                    <td>GoldCorp Inc</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Alejandro</th>
+                                    <td>Juarez</td>
+                                    <td>Vazquez</td>
+                                    <td>19092020</td>
+                                    <td>35</td>
+                                    <td>Envío</td>
+                                    <td>USD</td>
+                                    <td>$ 1,909,000,788.00</td>
+                                    <td>Canadá</td>
+                                    <td>N/A</td>
+                                    <td>No</td>
+                                    <td>GoldCorp Inc</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Alejandro</th>
+                                    <td>Juarez</td>
+                                    <td>Vazquez</td>
+                                    <td>19092020</td>
+                                    <td>35</td>
+                                    <td>Envío</td>
+                                    <td>USD</td>
+                                    <td>$ 1,909,000,788.00</td>
+                                    <td>Canadá</td>
+                                    <td>N/A</td>
+                                    <td>No</td>
+                                    <td>GoldCorp Inc</td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </Colxx>
                     <Colxx xxs="6" className="mb-6">
                         <FormGroup>
@@ -187,7 +265,38 @@ export default class Secondcinco extends Component {
                                 <option>2024</option>
                             </Input>
                         </FormGroup>
-                        <div id="chartdiv2" style={{ width: "100%", height: "350px" }}></div>
+                        <Table style={{
+                            background: '#dedede',
+                            display: 'block',
+                            overflow: 'auto',
+                            height: '290px'
+                        }}>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Denominación o Razón Social</th>
+                                    <td scope="row">Fecha de Constitución</td>
+                                    <td scope="row">Temporalidad (Meses)</td>
+                                    <td scope="row">Envío/Recepción</td>
+                                    <td scope="row">Monto</td>
+                                    <td scope="row">País Destino</td>
+                                    <td scope="row">Países que envía a México</td>
+                                    <td scope="row">Paíse destino de baja imposición fiscal</td>
+                                    <td scope="row">Beneficios Envío</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tor MSA de S.A de C.V</th>
+                                    <td>2019/04/30</td>
+                                    <td>12</td>
+                                    <td>Envío</td>
+                                    <td>USD</td>
+                                    <td>$ 1,909,788.00</td>
+                                    <td>Canadá</td>
+                                    <td>N/A</td>
+                                    <td>No</td>
+                                    <td>GoldCorp Inc</td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </Colxx>
                 </Row>
             </Fragment>
