@@ -11,7 +11,7 @@
     "@nivo/chord": "^0.61.1",
     "@nivo/sunburst": "^0.61.0",
     "availity-reactstrap-validation": "^2.0.4",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.7.2",
     "classnames": "2.2.6",
     "d3": "^5.16.0",
